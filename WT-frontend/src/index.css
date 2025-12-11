@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+.btn {
+    @apply bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition;
+}
+.heading {
+    @apply text-4xl text-blue-500 ;
+}
+.nav-link {
+  @apply cursor-pointer;
+}
+
+.nav-link:hover {
+  @apply text-blue-600;
+}
+
+.nav-link.active {
+  @apply text-blue-600 font-semibold;
+}
