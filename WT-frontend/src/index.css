@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  --font-quotes: "Courier New, Courier, monospace";
+}
+.quotes {
+  font-family: var(--font-quotes);
+}
 
 .btn {
     @apply bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition;

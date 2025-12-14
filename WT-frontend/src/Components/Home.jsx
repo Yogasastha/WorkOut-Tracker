@@ -1,5 +1,5 @@
 import React from "react";
-import bg_home from "../../Utility/images/bg_home.png";
+import bg_home from "../Utility/images/bg_home.png";
 
 const Home = () => {
   return (
@@ -15,8 +15,8 @@ const Home = () => {
         GYM Title Demo
       </h1>
       <div className="py-2 text-center">
-      <p className="text-white">Zero Excuses. All Results</p>
-      <p className="text-white">Discipline. Dedication. Domination.</p>
+      <p className="text-white quotes">Zero Excuses. All Results</p>
+      <p className="text-white quotes">Discipline. Dedication. Domination.</p>
       </div>
       </div>
     </div>

@@ -1,25 +1,32 @@
-import Nav from "./Components/navComponents/Nav"
-import { Route, Routes } from "react-router-dom"
-import Home from "./Components/navComponents/Home"
-import Leaderboard from "./Components/navComponents/Leaderboard"
-import About from './Components/navComponents/About';
-import Contact from './Components/navComponents/Contact';
-import GetStart from './Components/navComponents/GetStart';
+import Nav from "./Components/navComponents/Nav";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import Leaderboard from "./Components/Leaderboard";
+import About from "./Components/About";
+import Challenge from "./Components/Challenge";
+import Profile from "./Components/Profile";
+import Footer from "./Components/Footer";
+
+import "./Fa-icon/fontawesome";
 
 function App() {
-
   return (
-    <>
-    <Nav />
-    <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ranking" element={<Leaderboard/>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/get-started" element={<GetStart />} />
-      </Routes>
-    </>
-  )
+    <div className="min-h-screen flex flex-col">
+      <Nav />
+
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ranking" element={<Leaderboard />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/challenge" element={<Challenge />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+
+        <Footer />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
