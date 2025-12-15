@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Leaderboard from "./Components/Leaderboard";
 import About from "./Components/About";
-import Challenge from "./Components/Challenge";
+import Challenge from "./Components/Challenges/Challenge";
 import Profile from "./Components/Profile";
 import Footer from "./Components/Footer";
 

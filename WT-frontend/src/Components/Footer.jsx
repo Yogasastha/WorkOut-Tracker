@@ -14,6 +14,12 @@ const terms = [
   "Recalls",
   "Your Privacy Choices",
 ];
+const socialLinks = [
+  { icon: ["fab", "facebook"], label: "Facebook" },
+  { icon: ["fab", "instagram"], label: "Instagram" },
+  { icon: ["fab", "linkedin"], label: "LinkedIn" },
+  { icon: ["fab", "x-twitter"], label: "Twitter" },
+];
 const Footer = () => {
   return (
     <div className="bg-[rgb(206,203,203)]">
@@ -37,16 +43,26 @@ const Footer = () => {
         </div>
         <div>
           <div className="flex justify-center gap-8 py-3">
-            {navPages.map((item) => (
-              <NavLink to={item.path}>{item.title}</NavLink>
-            ))}
+            <nav className="flex gap-8">
+              {navPages.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className="hover:underline font-medium"
+                >
+                  {item.title}
+                </NavLink>
+              ))}
+            </nav>
           </div>
           <div className="flex justify-center py-2">
             <ul className="flex flex-row">
-              {terms.map((item) => (
-                <li>
-                  {item}{" "}
-                  {0 < item.length - 1 ? <span className="m-2">|</span> : ""}
+              {terms.map((item, index) => (
+                <li key={item} className="flex items-center">
+                  {item}
+                  {index !== terms.length - 1 && (
+                    <span className="mx-2">|</span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -58,21 +74,18 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center flex-col p-1">
-          <h1>Follow Us</h1>
-          <ul className="flex gap-3 text-xl">
-            <li>
-              <FontAwesomeIcon icon={["fab", "facebook"]} />
-            </li>
-            <li>
-              <FontAwesomeIcon icon={["fab", "instagram"]} />
-            </li>
-            <li>
-              <FontAwesomeIcon icon={["fab", "linkedin"]} />
-            </li>
-            <li>
-              <FontAwesomeIcon icon={["fab", "x-twitter"]} />
-            </li>
+         <div className="flex flex-col justify-center items-center gap-2">
+          <h2 className="font-semibold">Follow Us</h2>
+          <ul className="flex gap-4 text-xl">
+            {socialLinks.map(({ icon, label }) => (
+              <li key={label}>
+                <FontAwesomeIcon
+                  icon={icon}
+                  aria-label={label}
+                  className="cursor-pointer hover:text-blue-600"
+                />
+              </li>
+            ))}
           </ul>
         </div>
       </div>
