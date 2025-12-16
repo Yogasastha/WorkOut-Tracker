@@ -41,6 +41,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        
         <div>
           <div className="flex justify-center gap-8 py-3">
             <nav className="flex gap-8">
