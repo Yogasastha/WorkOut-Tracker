@@ -21,6 +21,7 @@ const socialLinks = [
   { icon: ["fab", "x-twitter"], label: "Twitter" },
 ];
 
+
 const Footer = () => {
   return (
     <div className="bg-[rgb(206,203,203)]">
