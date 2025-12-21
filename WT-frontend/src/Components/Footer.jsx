@@ -14,6 +14,7 @@ const terms = [
   "Recalls",
   "Your Privacy Choices",
 ];
+
 const socialLinks = [
   { icon: ["fab", "facebook"], label: "Facebook" },
   { icon: ["fab", "instagram"], label: "Instagram" },
