@@ -1,0 +1,8 @@
+{
+    "profile":[
+        {"firstName":"Thayo", "lastName": "Sri", "DOB":"19/04/2005"}
+    ],
+    "stats":[
+        {"ranking":"1", "streak":"34", "points":"13432"}
+    ]
+}
